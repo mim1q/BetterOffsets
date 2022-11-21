@@ -2,23 +2,23 @@ package com.github.mim1q.betteroffsets.block;
 
 import net.minecraft.block.BlockState;
 
-public class ExtendedOffset {
+public class BetterOffset {
   public final Type type;
-  public final OffsetFunction offsetFunction;
+  public final BetterOffsetFunction offsetFunction;
 
-  public ExtendedOffset(Type type) {
+  public BetterOffset(Type type) {
     this.type = type;
     this.offsetFunction = null;
   }
 
-  public ExtendedOffset(OffsetFunction offsetFunction) {
+  public BetterOffset(BetterOffsetFunction offsetFunction) {
     this.type = null;
     this.offsetFunction = offsetFunction;
   }
 
   public Type getType(BlockState state) {
     if (offsetFunction != null) {
-      return offsetFunction.getOffsetType(state);
+      return offsetFunction.getType(state);
     }
     return type;
   }
@@ -58,7 +58,7 @@ public class ExtendedOffset {
   }
 
   @FunctionalInterface
-  public interface OffsetFunction {
-    Type getOffsetType(BlockState state);
+  public interface BetterOffsetFunction {
+    Type getType(BlockState state);
   }
 }
