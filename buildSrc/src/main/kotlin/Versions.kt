@@ -5,7 +5,7 @@ object Versions {
   const val fabricLoader = "0.14.+"
   const val fabricApi = "0.58.0+1.19"
   const val yarn = "1.19+build.4"
-  const val loom = "0.12-SNAPSHOT"
+  const val loom = "1.0-SNAPSHOT"
 
   // Publishing
   const val cursegradle = "1.4.0"
