@@ -3,7 +3,9 @@
   "minVersion": "0.8",
   "package": "com.github.mim1q.betteroffsets.mixin",
   "mixins": [],
-  "client": [],
+  "client": [
+    "AbstractBlockStateMixin"
+  ],
   "server": [],
   "injectors": {
     "defaultRequire": 1
